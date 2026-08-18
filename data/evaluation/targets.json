@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "minimum_verified_total": 100,
+  "maximum_verified_total": 150,
+  "recommended_verified_total": 120,
+  "categories": {
+    "factual": {"minimum": 30, "recommended": 35},
+    "table": {"minimum": 12, "recommended": 15},
+    "visual": {"minimum": 12, "recommended": 15},
+    "comparison": {"minimum": 12, "recommended": 15},
+    "multi_step": {"minimum": 12, "recommended": 15},
+    "unanswerable": {"minimum": 12, "recommended": 15},
+    "adversarial": {"minimum": 10, "recommended": 10}
+  }
+}
+

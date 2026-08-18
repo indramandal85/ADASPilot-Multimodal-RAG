@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "corpus_id": "adas_research_v1",
+  "domain": "adas",
+  "description": "Public ADAS research papers, safety reports, and technical documents selected for the ADASPilot benchmark.",
+  "documents": [
+    {
+      "document_id": "nhtsa_ads_vision_safety",
+      "title": "Automated Driving Systems 2.0: A Vision for Safety",
+      "source_kind": "public_url",
+      "source_uri": "https://www.govinfo.gov/content/pkg/GOVPUB-TD8-PURL-gpo84787/pdf/GOVPUB-TD8-PURL-gpo84787.pdf",
+      "publisher": "National Highway Traffic Safety Administration",
+      "publication_year": 2017,
+      "license": null,
+      "expected_sha256": "2d5b1f189121d209ed9db0ec0d3dfa736fbc7317014f7ed3f9159cc5aab70660",
+      "page_count": 36,
+      "status": "verified",
+      "notes": "Official NHTSA publication mirrored by the U.S. Government Publishing Office."
+    },
+    {
+      "document_id": "euroncap_assisted_driving_v11",
+      "title": "Euro NCAP Assisted Driving Assessment Protocol v1.1",
+      "source_kind": "public_url",
+      "source_uri": "https://cdn.euroncap.com/cars/assets/euro_ncap_ad_test_and_assessment_protocol_v11_8683aa9456.pdf",
+      "publisher": "Euro NCAP",
+      "publication_year": 2023,
+      "license": null,
+      "expected_sha256": "55fe02d9812bd344031cd96a4e2ff232ab3799ca313cc5a5211e0d956f8535a0",
+      "page_count": 45,
+      "status": "verified",
+      "notes": "Official Euro NCAP Highway Assist Systems protocol, version 1.1, implementation 2023."
+    },
+    {
+      "document_id": "centerfusion_2020",
+      "title": "CenterFusion: Center-based Radar and Camera Fusion for 3D Object Detection",
+      "source_kind": "public_url",
+      "source_uri": "https://arxiv.org/pdf/2011.04841",
+      "publisher": "arXiv",
+      "publication_year": 2020,
+      "license": null,
+      "expected_sha256": "b976223e2e2dd6023c91e9e8be7c57ab843e4681a31f8799279aa09afb879a03",
+      "page_count": 10,
+      "status": "verified",
+      "notes": "Radar-camera fusion source with architecture figures, ablations, and result tables."
+    },
+    {
+      "document_id": "spatial_cnn_2017",
+      "title": "Spatial As Deep: Spatial CNN for Traffic Scene Understanding",
+      "source_kind": "public_url",
+      "source_uri": "https://arxiv.org/pdf/1712.06080",
+      "publisher": "arXiv",
+      "publication_year": 2017,
+      "license": null,
+      "expected_sha256": "c2f621ef678ed2d1b30ba543fccd3e903ead8e2cd0810c6858935c080253010c",
+      "page_count": 8,
+      "status": "verified",
+      "notes": "Lane-detection source with architecture figures and benchmark results."
+    },
+    {
+      "document_id": "radar_camera_fusion_review_2023",
+      "title": "Radar-Camera Fusion for Object Detection and Semantic Segmentation in Autonomous Driving: A Comprehensive Review",
+      "source_kind": "public_url",
+      "source_uri": "https://arxiv.org/pdf/2304.10410",
+      "publisher": "arXiv",
+      "publication_year": 2023,
+      "license": null,
+      "expected_sha256": "00001cd5b3c0225cef747f2c99b40e6b84b81335eb5e70fab725856df2d26c78",
+      "page_count": 40,
+      "status": "verified",
+      "notes": "Review source for cross-paper taxonomy, comparison, and multi-step questions."
+    }
+  ]
+}

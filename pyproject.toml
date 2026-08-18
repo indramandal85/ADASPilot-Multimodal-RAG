@@ -1,0 +1,106 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adaspilot"
+version = "0.1.0"
+description = "Auditable multimodal ADAS research intelligence system"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+authors = [{ name = "Indra Mandal" }]
+dependencies = [
+  "fastapi>=0.115,<1.0",
+  "httpx>=0.28,<1.0",
+  "langgraph>=1.0,<2.0",
+  "numpy>=2.0,<3.0",
+  "pillow>=11.0,<13.0",
+  "pydantic>=2.10,<3.0",
+  "pydantic-settings>=2.7,<3.0",
+  "pymupdf>=1.26,<2.0",
+  "pytesseract>=0.3.13,<1.0",
+  "python-multipart>=0.0.20,<1.0",
+  "qdrant-client[fastembed]>=1.15,<2.0",
+  "rank-bm25>=0.2.2,<1.0",
+  "uvicorn>=0.34,<1.0",
+]
+
+[project.optional-dependencies]
+ui = [
+  "streamlit>=1.54,<2.0",
+]
+web = [
+  "tavily-python>=0.7,<1.0",
+]
+evaluation = [
+  "openai>=2.20,<3.0",
+  "ragas>=0.4,<0.5",
+]
+visual = [
+  "colpali-engine>=0.3.12,<0.5",
+  "torch>=2.5,<3.0",
+  "torchvision>=0.20,<1.0",
+  "transformers>=4.50,<6.0",
+]
+dev = [
+  "mypy>=1.14,<2.0",
+  "pytest>=8.3,<10.0",
+  "pytest-asyncio>=0.25,<2.0",
+  "pytest-cov>=6.0,<8.0",
+  "ruff>=0.9,<1.0",
+]
+
+[project.scripts]
+adaspilot-api = "adaspilot.cli.run_api:main"
+adaspilot-ask = "adaspilot.cli.ask:main"
+adaspilot-build-index = "adaspilot.cli.build_index:main"
+adaspilot-build-visual-index = "adaspilot.cli.build_visual_index:main"
+adaspilot-evaluate = "adaspilot.cli.evaluate:main"
+adaspilot-evaluate-system = "adaspilot.cli.evaluate_system:main"
+adaspilot-ingest = "adaspilot.cli.ingest:main"
+adaspilot-orchestrate = "adaspilot.cli.orchestrate:main"
+adaspilot-run-experiments = "adaspilot.cli.run_experiments:main"
+adaspilot-validate-data = "adaspilot.cli.validate_data:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers --cov=adaspilot --cov-report=term-missing --cov-fail-under=85"
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.coverage.run]
+branch = true
+source = ["adaspilot"]
+omit = ["src/adaspilot/cli/*"]
+
+[tool.coverage.report]
+exclude_also = [
+  "if TYPE_CHECKING:",
+  "if __name__ == .__main__.:",
+  "raise NotImplementedError",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["S101"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["adaspilot"]
+plugins = ["pydantic.mypy"]
+untyped_calls_exclude = ["pymupdf"]
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true

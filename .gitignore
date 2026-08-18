@@ -1,0 +1,84 @@
+# Operating-system and editor files
+.DS_Store
+**/.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+*.p12
+credentials*.json
+secrets*.json
+
+# Python environments, caches, packaging, and test output
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+dist/
+build/
+site/
+.ipynb_checkpoints/
+
+# Logs, temporary files, and local process state
+*.log
+logs/
+tmp/
+temp/
+*.pid
+
+# Local corpus files and proprietary/private material
+data/raw/
+data/corpus/raw/
+data/corpus/uploads/
+data/corpus/manifest.local.json
+data/private/
+private/
+proprietary/
+attachments/
+
+# Generated corpus builds, indexes, embeddings, and evaluation output
+data/processed/
+data/index/
+data/results/
+*.sqlite
+*.sqlite3
+*.db
+*.onnx
+*.safetensors
+*.gguf
+*.pt
+*.pth
+models/
+checkpoints/
+
+# AI coding-assistant metadata and private implementation prompts
+.codex/
+.claude/
+.cursor/
+.continue/
+.aider*
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+.github/copilot-instructions.md
+ADASPILOT_IMPLEMENTATION_BLUEPRINT.md
